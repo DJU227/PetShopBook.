@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.Image?>
+<VBox alignment="CENTER" spacing="15" style="-fx-background-color: #f7f7f7; -fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="org.example.petshopbook.AnimalController">
+    <!-- Título do Cadastro -->
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #0a096f;" text="Cadastro de Animal" />
+    <ImageView fitHeight="31.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fitHeight="80.0" fitWidth="90.0">
+        <image>
+            <Image url="https://static.vecteezy.com/system/resources/thumbnails/014/624/304/small_2x/dog-and-cat-paws-with-sharp-claws-cute-animal-footprints-png.png"/>
+        </image>
+    </ImageView>
+    <!-- Campo de Nome do Animal -->
+    <TextField fx:id="nomeField" promptText="Nome" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;" />
+
+    <!-- ComboBox para escolha do tipo de animal -->
+    <ComboBox fx:id="tipoComboBox" promptText="Tipo" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Gato" />
+                <String fx:value="Cachorro" />
+                <String fx:value="Ave" />
+                <String fx:value="Exótico" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Campos adicionais -->
+    <TextField fx:id="idadeField" promptText="Idade" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;" />
+    <TextField fx:id="sexoField" promptText="Sexo" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;" />
+    <TextField fx:id="racaField" promptText="Raça" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;" />
+
+    <!-- Área de descrição -->
+    <TextArea fx:id="descricaoField" promptText="Descrição" style="-fx-pref-width: 300; -fx-pref-height: 100; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;" />
+
+    <!-- Botões -->
+    <Button onAction="#handleCadastro" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-padding: 10; -fx-border-radius: 5px;" text="Cadastrar" />
+    <Button onAction="#handleVoltarAoMenu" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-padding: 10; -fx-border-radius: 5px;" text="Voltar ao Menu" />
+</VBox>

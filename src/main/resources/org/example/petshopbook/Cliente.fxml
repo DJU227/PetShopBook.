@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.petshopbook.ClienteController" spacing="15" alignment="CENTER" style="-fx-background-color: #f7f7f7; -fx-padding: 20;">
+    <Label text="Cadastro de Pessoa" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+    <ImageView fitHeight="90.0" fitWidth="125.0">
+        <image>
+            <Image url="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"/>
+        </image>
+    </ImageView>
+    <!-- Campos de entrada estilizados -->
+    <TextField fx:id="nomeField" promptText="Nome" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;"/>
+    <TextField fx:id="cpfField" promptText="CPF" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;"/>
+    <TextField fx:id="telefoneField" promptText="Telefone" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;"/>
+    <TextField fx:id="enderecoField" promptText="Endereço" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;"/>
+
+    <!-- ComboBox para o status de procura -->
+    <ComboBox fx:id="statusProcuraComboBox" promptText="Status de Procura" style="-fx-pref-width: 300; -fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-font-size: 14px;">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Gato"/>
+                <String fx:value="Cachorro"/>
+                <String fx:value="Ave"/>
+                <String fx:value="Exótico"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Botões estilizados -->
+    <Button text="Cadastrar" onAction="#cadastrarCliente" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-padding: 10; -fx-border-radius: 5px;"/>
+    <Button text="Voltar ao Menu" onAction="#handleVoltarAoMenu" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-padding: 10; -fx-border-radius: 5px;"/>
+</VBox>
